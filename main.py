@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import time
 from sample_quotes import quotes
+from random import randint
 
 class GUI(tk.Canvas):
     def __init__(self, root, *args, **kwargs):
@@ -80,7 +81,8 @@ class GUI(tk.Canvas):
         if self.txt_input.get('1.0', 'end') != '\n':
             words = self.txt_input.get('1.0', 'end').split()
         else:
-            words = quotes[0].split()
+            item = randint(0, len(quotes)-1)
+            words = quotes[item].split()
 
         delay = 1 / (self.get_wpm() / 60)
 
