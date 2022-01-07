@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
 import time
-#from sample_quotes import quotes
 from random import randint
 
 class GUI(tk.Canvas):
